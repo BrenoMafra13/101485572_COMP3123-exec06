@@ -57,7 +57,7 @@ noteRoutes.put('/notes/:noteId', async (req, res) => {
 
 noteRoutes.delete('/notes/:noteId', async (req, res) => {
     try {
-        const deletedNote = await noteModel.findByIdAndRemove(req.params.noteId);
+        const deletedNote = await noteModel.findByIdAndDelete(req.params.noteId);
         if (!deletedNote) {
             return res.status(404).send({ message: "Note not found" });
         }
