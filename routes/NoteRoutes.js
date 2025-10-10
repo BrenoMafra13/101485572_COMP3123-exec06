@@ -1,4 +1,4 @@
-const noteModel = require('../models/Notes.js');
+const noteModel = require('../models/NotesModel.js');
 const express = require('express');
 const noteRoutes = express.Router();
 
